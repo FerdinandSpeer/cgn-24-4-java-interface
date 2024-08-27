@@ -27,18 +27,20 @@ public class Main {
         Noisy[] noises = {guitar, jigsaw, plane};
 
         Noisy noisy = new Guitar();
+
         System.out.println("_____________________________________________________");
 
         //Challenge1:
         //Step5: initialize an object of the 'MusicPlayer' and 'VideoPlayer' classes with the 'Playable' interface (polymorphism).
-        Playable musicPlayer = new MusicPlayer();
-        Playable videoPlayer = new VideoPlayer();
+        MusicPlayer musicPlayer = new MusicPlayer();
+        VideoPlayer videoPlayer = new VideoPlayer();
 
         //Step6: create an object of the 'MediaController' class
         MediaController mediaController = new MediaController();
         // and use it to play both a song and a video.
         mediaController.playMedia(musicPlayer); //returns "Play a song"
         mediaController.playMedia(videoPlayer); //returns "Play a video"
+
     }
     //Session1:
     public static void recordNoise(Noisy noisy){
@@ -46,7 +48,4 @@ public class Main {
         noisy.makeNoise();
         System.out.println("Recording ended");
     }
-
-    //Challenge1:
-
 }
